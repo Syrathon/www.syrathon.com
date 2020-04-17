@@ -1,0 +1,79 @@
+<section id="whcom_product">
+    <div class="whcom_product_name"><h1>{$product_name}</h1></div>
+    <div class="whcom_row container m-auto whmpress">
+        <div class="whcom_col_xl_8 whcom_col_lg_12 whcom_col_sm_12 flex-box">
+            <div class="main-content-list">
+                <div class="main-content-list">
+                    <div class="headline-container">BASIC FEATURES</div>
+                    <div class="content-container content-container-list">
+                        <ul class="list-unstyled list-items">
+
+                            {foreach $complete_product as $index=>$product}
+                            <li>
+                                <i class="fa fa-check color-green"></i> {$product}
+                                {foreach $product_tooptip as $num => $tooltip_text}
+                                {if $tooltip_text ne '' and $index eq $num}
+                                <span class="whcom_tooltip" style="float: right">
+                                    <i class="far fa-question-circle"></i>
+                                <span class="whcom_tooltiptext">{$tooltip_text}</span>
+                                </span>
+                                {/if}
+                                {/foreach}
+                            </li>
+                            {/foreach}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whcom_col_xl_4 whcom_col_sm_12 flex-box">
+            <div class="product-label">New!</div>
+            <div class="box0">
+                <span></span>
+            </div>
+            <div class="whcom_row row-content">
+                <div class="whcom_col_6 right-side-border">
+                    <ul class="list-items side-barleft">
+                        <li>Annually
+                        </li>
+                        <li>Biennially
+                        </li>
+                        <li>
+                            Triennially
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="whcom_col_6">
+                    <ul class="list-unstyled list-items side-baright" style="text-align: center;">
+                        <li><b>{$currency_prefix}{$product_annual_price}</b>
+                        </li>
+                        <li><b>{$currency_prefix}{$product_biennially_price}</b>
+                        </li>
+                        <li>
+                            <b>{$currency_prefix}{$product_triennially_price}</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="product-order-sidebar-ordering">
+
+                <div class="price ">
+
+
+                </div>
+
+
+                <div class="price-additional ">
+                    <div class="product-order-sidebar-check-availability">
+                        <a href="javascript:history.go(-1)" class="link-single-internal link-color-white"><b>Back to List</b></a>
+                    </div>
+                </div>
+                <span class="btn btn-yellow btn-md btn-block">
+                        {$order_button}
+                    </span>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,10 @@
+2019-07-30T14:49:41+00:00 CRITICAL /home/syrathon/public_html/wp-content/plugins/jetpack/locales.php 中第 2252 行的 Allowed memory size of 41943040 bytes exhausted (tried to allocate 524288 bytes)
+
+2019-07-30T14:49:41+00:00 CRITICAL /home/syrathon/public_html/wp-content/plugins/woocommerce/includes/class-wc-api.php 中第 179 行的 Allowed memory size of 41943040 bytes exhausted (tried to allocate 73728 bytes)
+
+2019-07-30T14:49:42+00:00 CRITICAL /home/syrathon/public_html/wp-includes/pomo/translations.php 中第 100 行的 Allowed memory size of 41943040 bytes exhausted (tried to allocate 20480 bytes)
+
+2019-07-30T14:49:42+00:00 CRITICAL /home/syrathon/public_html/wp-includes/pomo/translations.php 中第 100 行的 Allowed memory size of 41943040 bytes exhausted (tried to allocate 20480 bytes)
+
+2019-07-30T14:49:43+00:00 CRITICAL /home/syrathon/public_html/wp-includes/functions.php 中第 4093 行的 Allowed memory size of 41943040 bytes exhausted (tried to allocate 20480 bytes)
+

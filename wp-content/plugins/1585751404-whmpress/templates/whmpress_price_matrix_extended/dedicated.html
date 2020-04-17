@@ -1,0 +1,169 @@
+<style>
+	.whmpress.whmpress_price_matrix.dedicated .whcom_row{
+		margin: 0;
+	}
+	.whmpress.whmpress_price_matrix.dedicated .whcom_heading .whcom_row {
+		padding: 11px 20px;
+		background-color: #383838;
+		color: #fff;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+	.whmpress.whmpress_price_matrix.dedicated .whcom_product_item li{
+		margin: 5px 0;
+	}
+	.whmpress.whmpress_price_matrix.dedicated .whcom_product_item .whcom_row{
+		padding: 20px;
+		background: #ffffff;
+		margin-bottom: 2px;
+	}
+	.whmpress.whmpress_price_matrix.dedicated button.whmpress.whmpress_order_button {
+		padding: 6px 12px;
+		font-size: 14px;
+		font-weight: 400;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		display: block;
+		width: 100%;
+		position: relative;
+		text-transform: uppercase;
+	}
+
+	.whmpress.whmpress_price_matrix.dedicated button.whmpress.whmpress_order_button:before {
+		content: "\f07a";
+		font: normal normal normal 14px/1 FontAwesome;
+		padding-right: 4px;
+	}
+	.whmpress.whmpress_price_matrix.dedicated .whcom_button {
+		display: block;
+		margin: 0 auto;
+		line-height: 1em;
+		cursor: pointer;
+		font-size: 13px;
+		padding: 18px 0 0;
+		text-align: center;
+	}
+	.whmpress.whmpress_price_matrix.dedicated .whcom_product_item .whcom_row.anti ul li {
+		margin: 0;
+		font-size: 14px;
+	}
+	.whmpress.whmpress_price_matrix.dedicated .anti {
+		display: none;
+	}
+	.whmpress.whmpress_price_matrix.dedicated .ewq .anti{
+		display: block;
+	}
+
+	.whmpress.whmpress_price_matrix.dedicated .ewq .fa-angle-right:before{
+		content: "\f107";
+	}
+	.product-details-headline {
+		 font-size: 1rem;
+		padding: 10px 0;
+	}
+	.product-details-headline strong {
+		float: left;
+		width: 100%;
+		max-width: 66%;
+	}
+
+</style>
+<div class="whmpress whmpress_price_matrix dedicated">
+	{if $params.data_table|lower eq "yes"}
+	<script>
+		jQuery(function ()
+		{
+			jQuery('table#{$params.table_id}').DataTable();
+		});
+	</script>
+	{else}
+	<label>{$search_label}</label>
+	<input type='search' placeholder='Search' id='{$params.table_id}_search_price_table' style='width:50%'>
+	<script>
+		jQuery(function ()
+		{
+			jQuery('input#{$params.table_id}_search_price_table').quicksearch('table#{$params.table_id} tbody tr');
+		});
+	</script>
+	{/if}
+	<div class="table-responsive">
+		<div id='{$params.table_id}' class="table-responsive table-striped table-condensed">
+			<div class="whcom_heading">
+			<div class="whcom_row">
+				{if $sr_title}
+				<div class="whcom_col_xl_1">PRICE</div>
+				{/if}
+				{foreach $data as $index=>$big_array}
+				{if $big_array.sr eq '1'}
+				{foreach $big_array as $feature => $value  }
+				{if $feature eq 'description_extended'}
+				{foreach $value as $innerindex => $extended_value }
+				{if $innerindex eq '1'}
+				{foreach $extended_value as $double_index => $real_value }
+				<div class="whcom_col_xl_3">{$real_value.feature_title}</div>
+				{/foreach}
+				{/if}
+				{/foreach}
+				{/if}
+				{/foreach}
+				{/if}
+				{/foreach}
+			</div>
+			</div>
+			<div class="whcom_product_item">
+				<ul>
+					{foreach $data as $index=>$big_array}
+			<li>
+				<div class="whcom_row lob">
+				{if $sr_title}
+				<div class="whcom_col_xl_1" data-content="{$sr_title}">{$big_array.monthly}</div>
+				{/if}
+					{foreach $big_array as $feature => $value}
+					{if $feature eq 'description_extended'}
+					{foreach $value as $innerindex => $extended_value }
+					{if $innerindex eq '1'}
+					{foreach $extended_value as $double_index => $real_value }
+					<div class="whcom_col_xl_3">{$real_value.feature_value}</div>
+					{/foreach}
+					{/if}
+					{/foreach}
+					{/if}
+					{/foreach}
+				<div class="whcom_col_xl_2" data-content="Order Now">
+					{if $big_array.order_url}{$big_array.order_url}{/if}
+				<div class="whcom_button">Details <i class="fa fa-angle-right"></i></div>
+				</div>
+				</div>
+				<div class="whcom_row anti" style="margin-bottom: 0;"  >
+					{foreach $data as $index=>$big_array}
+					{if $big_array.sr eq '1'}
+					{foreach $big_array as $feature => $value  }
+					{if $feature eq 'description_extended'}
+					{foreach $value as $innerindex => $extended_value }
+					{if $innerindex eq '2'}
+					{foreach $extended_value as $double_index => $real_value }
+					<div class="whcom_col_lg_4">
+						<div class="product-details-headline"><strong>{$real_value.feature_title}:</strong> <span>{$real_value.feature_value}</span></div>
+					</div>
+					{/foreach}
+					{/if}
+					{/foreach}
+					{/if}
+					{/foreach}
+					{/if}
+					{/foreach}
+			</div>
+				<div class="whcom_row anti">
+				</div>
+			</li>
+			{/foreach}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    jQuery( ".whcom_product_item li" ).click(function() {
+        jQuery( this ).toggleClass( "ewq" );
+    });
+</script>

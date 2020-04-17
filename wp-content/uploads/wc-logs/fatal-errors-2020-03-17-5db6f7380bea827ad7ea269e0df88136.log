@@ -1,0 +1,62 @@
+2020-03-17T07:56:51+00:00 CRITICAL /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php 中第 1722 行的 Uncaught Error: Call to undefined function fnmatch() in /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php:1722
+Stack trace:
+#0 /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php(1867): SW_CLOUDFLARE_PAGECACHE->is_url_to_bypass()
+#1 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(288): SW_CLOUDFLARE_PAGECACHE->bypass_cache_on_init('')
+#2 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /www/wwwroot/www.syrathon.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /www/wwwroot/www.syrathon.com/wp-settings.php(523): do_action('init')
+#5 /www/wwwroot/www.syrathon.com/wp-config.php(93): require_once('/www/wwwroot/ww...')
+#6 /www/wwwroot/www.syrathon.com/wp-load.php(37): require_once('/www/wwwroot/ww...')
+#7 /www/wwwroot/www.syrathon.com/wp-admin/admin-ajax.php(22): require_once('/www/wwwroot/ww...')
+#8 {main}
+  thrown
+
+2020-03-17T07:57:20+00:00 CRITICAL /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php 中第 1722 行的 Uncaught Error: Call to undefined function fnmatch() in /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php:1722
+Stack trace:
+#0 /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php(1867): SW_CLOUDFLARE_PAGECACHE->is_url_to_bypass()
+#1 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(288): SW_CLOUDFLARE_PAGECACHE->bypass_cache_on_init('')
+#2 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /www/wwwroot/www.syrathon.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /www/wwwroot/www.syrathon.com/wp-settings.php(523): do_action('init')
+#5 /www/wwwroot/www.syrathon.com/wp-config.php(93): require_once('/www/wwwroot/ww...')
+#6 /www/wwwroot/www.syrathon.com/wp-load.php(37): require_once('/www/wwwroot/ww...')
+#7 /www/wwwroot/www.syrathon.com/wp-admin/admin-ajax.php(22): require_once('/www/wwwroot/ww...')
+#8 {main}
+  thrown
+
+2020-03-17T07:57:23+00:00 CRITICAL /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php 中第 1722 行的 Uncaught Error: Call to undefined function fnmatch() in /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php:1722
+Stack trace:
+#0 /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php(1867): SW_CLOUDFLARE_PAGECACHE->is_url_to_bypass()
+#1 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(288): SW_CLOUDFLARE_PAGECACHE->bypass_cache_on_init('')
+#2 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /www/wwwroot/www.syrathon.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /www/wwwroot/www.syrathon.com/wp-settings.php(523): do_action('init')
+#5 /www/wwwroot/www.syrathon.com/wp-config.php(93): require_once('/www/wwwroot/ww...')
+#6 /www/wwwroot/www.syrathon.com/wp-load.php(37): require_once('/www/wwwroot/ww...')
+#7 /www/wwwroot/www.syrathon.com/wp-admin/admin.php(34): require_once('/www/wwwroot/ww...')
+#8 /www/wwwroot/www.syrathon.
+
+2020-03-17T07:57:39+00:00 CRITICAL /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php 中第 1722 行的 Uncaught Error: Call to undefined function fnmatch() in /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php:1722
+Stack trace:
+#0 /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php(1867): SW_CLOUDFLARE_PAGECACHE->is_url_to_bypass()
+#1 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(288): SW_CLOUDFLARE_PAGECACHE->bypass_cache_on_init('')
+#2 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /www/wwwroot/www.syrathon.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /www/wwwroot/www.syrathon.com/wp-settings.php(523): do_action('init')
+#5 /www/wwwroot/www.syrathon.com/wp-config.php(93): require_once('/www/wwwroot/ww...')
+#6 /www/wwwroot/www.syrathon.com/wp-load.php(37): require_once('/www/wwwroot/ww...')
+#7 /www/wwwroot/www.syrathon.com/wp-admin/admin.php(34): require_once('/www/wwwroot/ww...')
+#8 /www/wwwroot/www.syrathon.
+
+2020-03-17T07:57:44+00:00 CRITICAL Uncaught Error: Call to undefined function fnmatch() in /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php:1722
+Stack trace:
+#0 /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php(1867): SW_CLOUDFLARE_PAGECACHE->is_url_to_bypass()
+#1 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(288): SW_CLOUDFLARE_PAGECACHE->bypass_cache_on_init('')
+#2 /www/wwwroot/www.syrathon.com/wp-includes/class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#3 /www/wwwroot/www.syrathon.com/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /www/wwwroot/www.syrathon.com/wp-settings.php(523): do_action('init')
+#5 /www/wwwroot/www.syrathon.com/wp-config.php(93): require_once('/www/wwwroot/ww...')
+#6 /www/wwwroot/www.syrathon.com/wp-load.php(37): require_once('/www/wwwroot/ww...')
+#7 /www/wwwroot/www.syrathon.com/wp-blog-header.php(13): require_once('/www/wwwroot/ww...')
+#8 /www/wwwroot/www.syrathon. in /www/wwwroot/www.syrathon.com/wp-content/plugins/wp-cloudflare-page-cache/wp-cloudflare-super-page-cache.php on line 1722
+

@@ -1,0 +1,200 @@
+
+<style>
+    .comobo-section .headline-container,
+    .comobo-section .box0,
+    .comobo-section .product-order-sidebar-ordering{
+        background: #337ab7;
+    }
+    ul.list-unstyled.list-items{
+        background-color: #ffffff;
+    }
+    .headline-container {
+        clear: both;
+    }
+    ul.list-items li.icon-box-list {
+        float: left;
+        text-align: center;
+        width: 100%;
+        max-width: 33.3333333333%;
+        padding: 15px;
+        font-size: 16px;
+    }
+    li.icon-box-list p {
+        margin: 0;
+    }
+    .comobo-section .side-barleft,
+    .comobo-section .side-baright{
+        font-size: 18px;
+    }
+    .comobo-section .box0 span {
+        font-size: 20px;
+    }
+    .product-label {
+        background-color: #d05b00;
+        font-size: 22px;
+    }
+    .icon_image:before {
+        content: "\f00c";
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+    .icon_image_close:before{
+        content: "\f00d";
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+    .color-red{
+        color: red;
+    }
+    .comobo-section .btn.btn-yellow button {
+        background: #FFD520;
+    }
+</style>
+<section id="whcom_product" class="comobo-section">
+    <div class="whcom_product_name"><h1>{$product_name}</h1></div>
+    <div class="whcom_row container m-auto whmpress">
+        <div class="whcom_col_xl_8 whcom_col_lg_12 whcom_col_sm_12 flex-box">
+            <div class="main-content-list">
+                <div class="main-content-list">
+                    {foreach $product_headings as $index => $heading} <!-- foreach-1 start -->
+                    {if !empty($heading)} <!-- if-1 start -->
+                    <div class="headline-container">{{$heading}}</div>
+                    {/if}<!-- if-1 end -->
+                    {foreach $product_headings_desc as $num => $desc}<!-- foreach-2 start -->
+                    {if $index eq $num} <!-- index match if start -->
+                    {foreach $desc as $innerindex => $real_desc}<!-- foreach-3 start -->
+
+                    <ul class="list-unstyled list-items">
+                    {if $real_desc.feature_title eq "description"}
+                        <li>
+                            {$real_desc.feature_value}
+                        </li>
+                    {/if}
+                    </ul>
+
+
+                    {if $index eq 1 && !empty($heading)}<!-- if-2 start -->
+                    {if $real_desc.feature_title eq "Mobile Friendly"}
+                    {if $real_desc.feature_value eq "Yes"}
+                    <ul class="list-unstyled list-items icon-box-list name-2">
+                        <li class="icon-box-list">
+                            <img src="{$whmpress_path}/images/mobilecheck.png" alt="">
+                            <p>{$real_desc.feature_title}</p>
+                           </li>
+                        {else}
+                        <li class="icon-box-list">
+                            <img src="{$whmpress_path}/images/mobileclose.png" alt="">
+                            <p>{$real_desc.feature_title}</p>
+                        </li>
+                    {/if}
+                    {/if}
+
+
+                    {if $real_desc.feature_title eq "Green Address Bar"}
+                    {if $real_desc.feature_value eq "Yes"}
+                        <li class="icon-box-list">
+                            <img src="{$whmpress_path}/images/securitycheck.png" alt="">
+                            <p>{$real_desc.feature_title}</p></li>
+                        {else}
+                        <li class="icon-box-list">
+                            <img src="{$whmpress_path}/images/securityclose.png" alt="">
+                            <p>{$real_desc.feature_title}</p></li>
+                    {/if}
+                    {/if}
+
+                    {if $real_desc.feature_title eq "Site Seal"}
+                    {if $real_desc.feature_value eq "Yes"}
+
+                        <li class="icon-box-list">
+                            <img src="{$whmpress_path}/images/usercheck.png" alt="">
+                            <p>{$real_desc.feature_title}</p></li>
+                        {else}
+                        <li class="icon-box-list">
+                            <img src="{$whmpress_path}/images/userclose.png" alt="">
+                            <p>{$real_desc.feature_title}</p></li>
+                    </ul>
+                    {/if}
+                    {/if}
+                    {/if}<!-- if-2 end -->
+
+
+                    {/foreach}<!-- foreach-3 end -->
+                    {/if} <!-- index match if end -->
+                    {/foreach}<!-- foreach-2 end -->
+
+                    {/foreach}<!-- foreach-1 end -->
+                    <ul class="list-unstyled list-items name-3">
+                    {foreach $desc as $innerindex => $real_desc}
+                        {if $index > 1 && !empty($heading)}<!-- if-3 start -->
+                        <li>
+                            {if $real_desc.feature_value eq "No"}
+                            <i class="fa fa-close color-red"></i>
+                            {else}
+                            <i class="fa fa-check color-green"></i>
+                            {/if}
+                            <strong>{$real_desc.feature_title}:</strong> {$real_desc.feature_value}
+                            {if $real_desc.tooltip_text ne ''}
+                            <span class="whcom_tooltip" style="float: right">
+                                    <i class="fa fa-question-circle"></i>
+                                <span class="whcom_tooltiptext">{$real_desc.tooltip_text}</span>
+                                </span>
+                            {/if}
+                        </li>
+                        {/if}<!-- if-3 end -->
+                    {/foreach}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="whcom_col_xl_4 whcom_col_sm_12 flex-box">
+            <div class="pricing-box">
+                <div class="product-label">New!</div>
+                <div class="box0">
+                <span>{$product_name}</span>
+            </div>
+                <div class="whcom_row row-content">
+                <div class="whcom_col_6 right-side-border">
+                    <ul class="list-items side-barleft">
+                        <li>Annually
+                        </li>
+                        <li>Biennially
+                        </li>
+                        <li>
+                            Triennially
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="whcom_col_6">
+                    <ul class="list-unstyled list-items side-baright" style="text-align: center;">
+                        <li><b>{$currency_prefix} {$product_annual_price}</b>
+                        </li>
+                        <li><b>{$currency_prefix} {$product_biennially_price}</b>
+                        </li>
+                        <li>
+                            <b>{$currency_prefix} {$product_triennially_price}</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                <div class="product-order-sidebar-ordering">
+
+                <div class="price ">
+
+
+                </div>
+
+
+                <div class="price-additional ">
+                    <div class="product-order-sidebar-check-availability">
+                        <a href="javascript:history.go(-1)" class="link-single-internal link-color-white"><b>Back to
+                            List</b></a>
+                    </div>
+                </div>
+                <span class="btn btn-yellow btn-md btn-block">
+                        {$order_button}
+                    </span>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
