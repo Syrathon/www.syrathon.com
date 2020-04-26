@@ -134,7 +134,7 @@ jQuery(function($){
 					}
 				}
 			});
-
+			
 			$.wpjam_autocomplete_query();
 
 			// $('.sortable').disableSelection();

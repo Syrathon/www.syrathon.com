@@ -19,6 +19,8 @@ WPJAM Basic 主要功能，就是去掉 WordPress 当中一些不常用的功能
 
 如果你的主机安装了 Memcacached 等这类内存缓存组件和对应的 WordPress 插件，这个插件也针对提供一些针对一些常用的插件和函数提供了对象缓存的优化版本。
 
+详细介绍和安装说明： <a href="http://blog.wpjam.com/project/wpjam-basic/">http://blog.wpjam.com/project/wpjam-basic/</a>。
+
 除此之外，WPJAM Basic 还支持多达十七个扩展，你可以根据自己的需求选择开启：
 
 | 扩展 | 简介 | 
@@ -41,8 +43,6 @@ WPJAM Basic 主要功能，就是去掉 WordPress 当中一些不常用的功能
 | 自定义页脚代码 | 在文章编辑页面可以单独设置每篇文章 Footer 代码。 |
 | 文章类型转换器 | 文章类型转换器，可以将文章在多种文章类型中进行转换。 |
 
-详细介绍和安装说明： <a href="http://blog.wpjam.com/project/wpjam-basic/">http://blog.wpjam.com/project/wpjam-basic/</a>。
-
 == Installation ==
 
 1. 上传 `wpjam-basic`目录 到 `/wp-content/plugins/` 目录
@@ -50,13 +50,15 @@ WPJAM Basic 主要功能，就是去掉 WordPress 当中一些不常用的功能
 
 == Changelog ==
 
-= 4.1.1 =
+= 4.1.4 =
 * 每周日常更新，修正用户提到bug。
 * 新增获取当前平台函数 wpjam_get_current_platform()。
+* 新增验证文本文件管理 class WPJAM_VerifyTXT。
+* 优化 WPJAM_Comment class。
 
 = 4.1 =
 * 新增禁止古腾堡编辑器加载 Google 字体。
-* 常用短代码新增B站视频支持 [bilibili]
+* 常用短代码新增B站视频支持 [bilibili]。
 * 经典编辑器标签切换优化。
 
 = 4.0 =

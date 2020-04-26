@@ -535,9 +535,7 @@ jQuery(function($){
 							}
 							
 							if(response.errmsg){
-								if(response.errmsg){
-									$('.notice').removeClass().addClass('notice notice-info').html('<p>'+response.errmsg+'</p>').fadeIn(400);
-								}
+								$('.notice').removeClass().addClass('notice notice-info').html('<p>'+response.errmsg+'</p>').fadeIn(400);
 							}else{
 								$('.notice').removeClass().addClass('notice notice-success').html('<p>'+action_title+'成功</p>').fadeIn(400);
 							}
@@ -732,7 +730,7 @@ jQuery(function($){
 		}
 	});
 
-	window.onpopstate = function(e) {
+	window.onpopstate = function(event){
 		if(wpjam_page_setting.current_list_table){
 			var params_pairs	= window.location.search.substring(1).split('&');
 			var params			= {};
